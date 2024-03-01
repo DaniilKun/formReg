@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&family=Nunito:wght@300;400;500;600;700;800;900&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/inputmask@5/dist/inputmask.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <section class="fields">
+        <h2 class="title">Регистрация</h2>
+
+        <h2 id="nameError" class="errorPop"></h2>
+        <form id="myForm">
+          <input
+            class="name"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Имя"
+            onchange="nameInput.classList.remove('error')"
+          />
+
+          <h2 id="emailError" class="errorPop"></h2>
+          <input
+            class="email"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            onchange="emailInput.classList.remove('error')"
+          />
+
+          <h2 id="passwordError" class="errorPop"></h2>
+          <input
+            class="password"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Пароль"
+            onchange="passwordInput.classList.remove('error')"
+          />
+
+          <h2 id="confirmPasswordError" class="errorPop"></h2>
+          <input
+            class="confirmPassword"
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Подтвердите пароль"
+            onchange="confirmPasswordInput.classList.remove('error')"
+          />
+
+          <h2 id="phoneError" class="errorPop"></h2>
+          <input
+            class="phone"
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{10}"
+            placeholder="+7 (___) ___-__-__"
+            onchange="phoneInput.classList.remove('error')"
+          />
+        </form>
+        <button onclick="sendForm()" class="btn">Отправить</button>
+        <div class="rules">
+          <input type="checkbox" id="rule" onchange="rule = !rule" />
+          <label for="rule" id="ruleLabel">
+            я согласен с <span id="infoToggle">правилами обработки</span> моих персональных данных
+          </label>
+        </div>
+        <div id="successMessage" class="success-message">
+          <h3 class="successMessage__txt">Форма успешно отправлена!</h3>
+          <button class="successMessage__btn">ok</button>
+          <div class="successMessage__exit">x</div>
+        </div>
+      </section>
+      <section class="info">
+        <div class="info__txt">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam autem dignissimos voluptas
+            consequatur accusamus mollitia consectetur doloremque maxime qui impedit optio, facilis
+            quibusdam ad deleniti natus eligendi asperiores inventore odio nostrum dolores commodi
+            repellat. Atque, voluptatum nostrum? Maiores officiis tempore necessitatibus laboriosam
+            pariatur sunt illum excepturi. Adipisci neque blanditiis possimus? Quidem minus nostrum
+            obcaecati reprehenderit aliquid tempora voluptate tenetur, quos voluptatum eveniet
+            dolores, deserunt explicabo fuga nulla. Ab quos ex repudiandae soluta reprehenderit
+            eaque animi atque optio adipisci! Cumque fuga fugiat sunt! Quasi voluptatibus dicta
+            aliquid recusandae consequuntur ipsum repudiandae rem sunt. Amet nostrum consequatur,
+            dolor numquam maxime provident pariatur dignissimos repellat fugit incidunt culpa non!
+            Aliquam et, ipsa minima similique sapiente eos itaque molestias voluptas, corporis
+            asperiores, laborum aperiam maiores. Amet veritatis reiciendis nihil dignissimos facilis
+            accusamus asperiores aliquid dolores sequi tempora blanditiis exercitationem, tempore
+            voluptate, harum totam. Quibusdam quaerat delectus impedit laudantium cumque. Eveniet
+            voluptatibus, voluptatum quidem doloribus nesciunt maxime fugiat recusandae qui quaerat
+            mollitia impedit magni rem perferendis at. Illo rerum doloribus officiis nulla, animi
+            voluptatum eum nesciunt, quidem a tempora maiores deserunt voluptas sapiente numquam
+            iusto ipsa porro voluptate similique quod praesentium ipsum qui aliquid fugiat magnam?
+            Accusantium eius officiis possimus dolor quod blanditiis commodi cum amet iste enim,
+            minus labore velit eum magni, obcaecati unde consequuntur dignissimos iusto natus
+            laudantium quos. Non voluptatum mollitia perferendis corporis! Dolores omnis, doloribus
+            ea nulla culpa quod labore quisquam ipsam repellat modi eius dolor quis debitis nobis,
+            reprehenderit adipisci ducimus neque sunt ad quidem dignissimos optio accusamus fugit
+            beatae? Nulla rem animi labore omnis maiores impedit molestias, eligendi aliquam
+            voluptates vitae modi asperiores assumenda laboriosam recusandae vel repellat sit
+            eveniet? Officiis, libero nesciunt doloremque necessitatibus dolores, nulla eum ad
+            ratione veritatis temporibus nemo sint in iusto unde vitae natus nihil voluptatem ex
+            soluta voluptas eligendi quas. Magnam, asperiores expedita!
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <script src="./js/successModal.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/validation.js"></script>
+  </body>
+</html>

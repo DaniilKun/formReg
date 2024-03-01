@@ -1,0 +1,305 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.fields {
+  position: relative;
+  width: 400px;
+}
+.fields p {
+  color: #000;
+  font-family: 'Montserrat';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+.title {
+  color: #000;
+  font-family: 'Montserrat';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 6px;
+}
+.phone,
+.email,
+.password,
+.confirmPassword,
+.name {
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid rgba(162, 159, 158, 0.3);
+  background: #fff;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  color: #000;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: center;
+}
+form input::placeholder {
+  text-align: center;
+  color: #a29f9e;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+/*НАЧАЛО скрытие placeholdera при фокусе */
+:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+:focus::-moz-placeholder {
+  color: transparent;
+}
+
+:focus:-moz-placeholder {
+  color: transparent;
+}
+
+:focus:-ms-input-placeholder {
+  color: transparent;
+}
+/* анимация сдвига */
+input::-webkit-input-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.3s ease;
+}
+input::-moz-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.3s ease;
+}
+input:-moz-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.3s ease;
+}
+input:-ms-input-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.3s ease;
+}
+input:focus::-webkit-input-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.3s ease;
+}
+input:focus::-moz-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.3s ease;
+}
+input:focus:-moz-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.3s ease;
+}
+input:focus:-ms-input-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.3s ease;
+}
+/* КОНЕЦ скрытие placeholdera при фокусе */
+
+.btn {
+  width: 400px;
+  height: 60px;
+  border-radius: 10px;
+  background: #f00;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #db0000;
+}
+.rules {
+  display: flex;
+  justify-content: center;
+}
+#rule {
+  cursor: pointer;
+  height: 30px;
+  margin: 0;
+  margin-right: 11px;
+}
+.rules label {
+  padding-top: 6px;
+  color: #000;
+  font-family: 'Montserrat';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.rules label span {
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* НАЧАЛО стилизация квадратного чекбокса */
+input[type='checkbox'] {
+  width: 40px;
+  height: 30px;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  border: 1px solid gray;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type='checkbox']:checked {
+  background-color: rgb(255, 255, 255);
+}
+
+input[type='checkbox']:checked:before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin: 3px;
+  background-color: red;
+  border-radius: 4px;
+}
+
+.info {
+  margin-top: 41px;
+  max-width: 919px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: rgba(255, 0, 0, 0.03);
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+  display: none;
+  justify-content: center;
+  padding-top: 22px;
+}
+.info__txt p {
+  height: auto;
+  max-width: 867px;
+  color: #000;
+  font-family: 'Montserrat';
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px; /* 150% */
+  margin-bottom: 0.5em;
+}
+
+/* стили для ошибки */
+.error {
+  border-radius: 10px;
+  border: 1px solid #f00 !important;
+  background: #fff;
+  box-shadow: 0px 0px 30px 0px rgba(255, 0, 0, 0.2);
+}
+.errorPop {
+  color: red;
+  font-family: 'Montserrat';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+
+.success-message {
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin: auto;
+  z-index: 99;
+  width: 300px;
+  height: 400px;
+  border: 2px solid black;
+  border-radius: 5%;
+  background-color: white;
+  text-align: center;
+}
+.successMessage__txt {
+  margin-top: 40px;
+  font-family: 'Montserrat';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+.successMessage__btn {
+  width: 150px;
+  height: 75px;
+  border-radius: 5%;
+  background-color: rgb(53, 237, 53);
+  border: 1px solid black;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%);
+  cursor: pointer;
+}
+.successMessage__exit {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  cursor: pointer;
+}
+#successMessage {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out; 
+}
+
+#successMessage.hidden {
+  opacity: 0;
+  pointer-events: none; /* Запрещаем взаимодействие с элементом во время анимации */
+}
+@media screen and (max-width: 922px) {
+  .info {
+    margin-top: 41px;
+    max-width: 100%;
+    width: 100%;
+
+    padding: 22px 24px 19px 28px;
+  }
+
+  .info__txt p {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 410px) {
+  .fields {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .title {
+    text-align: center;
+  }
+  #rule {
+    width: 56px;
+  }
+  .message {
+    margin-top: 10px;
+  }
+}
